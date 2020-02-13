@@ -1,0 +1,11 @@
+{
+  "name": "react-webpack",
+  "version": "1.0.0",
+  "description": "Configurando webpack para aplicação react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aguirre Sabino",
+  "license": "MIT"
+}
