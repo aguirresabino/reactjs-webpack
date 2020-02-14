@@ -13,5 +13,12 @@ module.exports = {
     compress: true,
     port: 9000,
     historyApiFallback: true,
+  },
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+    }]
   }
 }
