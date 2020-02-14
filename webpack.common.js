@@ -2,19 +2,11 @@ const path = require('path');
 const HWP = require('html-webpack-plugin');
 
 module.exports = {
-  mode: `${process.env.NODE_ENV}`,
-  devtool: 'source-map',
   entry: path.join(__dirname, 'src', 'index.js'),
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'index.js',
     publicPath: '/',
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    compress: true,
-    port: 9000,
-    historyApiFallback: true,
   },
   module: {
     rules: [{
@@ -25,7 +17,10 @@ module.exports = {
   },
   plugins: [
     new HWP(
-      {template: path.join(__dirname, 'public', 'index.html')}
+      {
+        title: 'React Webpack',
+        template: path.join(__dirname, 'public', 'index.html'),
+      }
     )
   ]
 }
