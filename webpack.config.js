@@ -1,4 +1,5 @@
 const path = require('path');
+const HWP = require('html-webpack-plugin');
 
 module.exports = {
   mode: `${process.env.NODE_ENV}`,
@@ -20,5 +21,10 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader',
     }]
-  }
+  },
+  plugins: [
+    new HWP(
+      {template: path.join(__dirname, 'public', 'index.html')}
+    )
+  ]
 }
